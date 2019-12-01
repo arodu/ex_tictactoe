@@ -1,0 +1,42 @@
+/* This file is for your main application css. */
+
+@import "./phoenix.css";
+
+@import "../../deps/phoenix_live_view/assets/css/live_view.css";
+
+
+.board{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 300px;
+}
+
+.board .square{
+  border: 1px black solid;
+  width: 80px;
+  height: 80px;
+  font-size: 5rem;
+  text-align: center;
+  cursor: pointer;
+  width: 32%;
+
+  margin-top: 4px;
+  margin-right: 4px;
+
+  /*display: inline-block;
+  
+  margin: 1px;
+
+  padding: 0;
+  margin-left: -3px;
+  border-radius: 0;
+  background-color: white;
+  color: black;
+  
+  line-height: 0; */
+}
+
+.board .square:hover{
+  background-color: #ddd;
+}
