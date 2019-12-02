@@ -70,16 +70,15 @@ defmodule TictactoeWeb.TictactoeLive do
     case Map.get(board, id) do
        nil -> 
             board = Map.put(board, id, player)
-            {board, changePlayer(player), checkWinner(board)}
+            player = case checkWinner(board) do
+                  true -> player
+                  false -> changePlayer(player)
+                end
+            {board, player, checkWinner(board)}
 
        _ -> {board, player, false}
     end
-
-    # IO.inspect(Map.keys(board))
-    # IO.inspect(id)
-    # IO.inspect()
-
-    # {board, changePlayer(player)}
+    
   end
 
 
