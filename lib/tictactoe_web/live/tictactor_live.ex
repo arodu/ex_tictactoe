@@ -70,11 +70,11 @@ defmodule TictactoeWeb.TictactoeLive do
     case Map.get(board, id) do
        nil -> 
             board = Map.put(board, id, player)
-            player = case checkWinner(board) do
-                  true -> player
-                  false -> changePlayer(player)
+            {player, pause} = case checkWinner(board) do
+                  true -> {player, true}
+                  false -> {changePlayer(player), false}
                 end
-            {board, player, checkWinner(board)}
+            {board, player, pause}
 
        _ -> {board, player, false}
     end
