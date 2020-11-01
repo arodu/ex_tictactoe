@@ -9,7 +9,7 @@ use Mix.Config
 
 # Configures the endpoint
 config :tictactoe, TictactoeWeb.Endpoint,
-  url: [host: "localhost"],
+  url: [host: "ex-tictactoe.herokuapp.com"],
   secret_key_base: "n7DPu7OMjtXvuC0Ej7+5NpBGKDIEu3dzu78wMBnhvhiv92A7l0lFYdARnxJHDWoU",
   render_errors: [view: TictactoeWeb.ErrorView, accepts: ~w(html json)],
   pubsub: [name: Tictactoe.PubSub, adapter: Phoenix.PubSub.PG2],
